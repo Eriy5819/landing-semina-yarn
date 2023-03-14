@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../configs';
 
 export function getData(url, params, token) {
   return axios.get(`${url}`, {
@@ -16,7 +16,6 @@ export async function postData(url, payload, token) {
     },
   });
 }
-
 export async function putData(url, payload, token) {
   return await axios.put(`${url}`, payload, {
     headers: {

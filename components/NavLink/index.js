@@ -7,7 +7,7 @@ export default function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className={`nav link ${router.pathname === href ? 'active' : ''}`}
+      className={`nav-link ${router.pathname === href ? 'active' : ''}`}
       aria-current='page'
     >
       {children}
