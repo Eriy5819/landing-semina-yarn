@@ -5,6 +5,7 @@ import Stories from '@/components/Stories';
 import Statistics from '@/components/Statistics';
 import Header from '@/components/Header';
 import { getData } from '@/utils/fetchData';
+import Footer from '@/components/Footer';
 
 export default function Home({ data }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ data }) {
       <CardEvent data={data} title='Featured Events' subTitle='Grow Today' />
       <Stories />
       <Statistics />
+      <Footer />
     </>
   );
 }
