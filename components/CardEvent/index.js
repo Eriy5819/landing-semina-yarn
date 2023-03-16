@@ -27,8 +27,8 @@ export default function CardEvent({ data, title, subTitle }) {
                   <div className='description'>
                     {data.venueName}, {formatDate(data.date)}
                   </div>
-                  <Link href={`/detail/${data._id}`}>
-                    {/* <a className='stretched-link'></a> */}
+                  <Link href={`/detail/${data._id}`} legacyBehavior>
+                    <a className='stretched-link'></a>
                   </Link>
                 </div>
               </div>
