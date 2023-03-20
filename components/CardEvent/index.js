@@ -1,7 +1,7 @@
 import React from 'react';
 import CardTitle from '../CardTitle';
 import Link from 'next/link';
-import { formatDate } from '@/utils/formatDate';
+import { formatDate } from '../../utils/formatDate';
 
 export default function CardEvent({ data, title, subTitle }) {
   return (
@@ -27,7 +27,7 @@ export default function CardEvent({ data, title, subTitle }) {
                   <div className='description'>
                     {data.venueName}, {formatDate(data.date)}
                   </div>
-                  <Link href={`/detail/${data._id}`} legacyBehavior>
+                  <Link legacyBehavior href={`/detail/${data._id}`}>
                     <a className='stretched-link'></a>
                   </Link>
                 </div>
