@@ -31,7 +31,7 @@ export default function detailPage({ detailPage, id }) {
   const handleSubmit = (ticketId, organizer) => {
     const token = Cookies.get('token');
     if (!token) {
-      return router.push('/singin');
+      return router.push('/signin');
     } else {
       router.push(
         `/checkout/${id}?ticketId=${ticketId}&organizer=${organizer}`
@@ -46,7 +46,7 @@ export default function detailPage({ detailPage, id }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section className='bg-nevy'>
+      <section className='bg-navy'>
         <Navbar />
       </section>
 
@@ -63,6 +63,7 @@ export default function detailPage({ detailPage, id }) {
             <div className='headline'>{detailPage.title}</div>
             <br />
             <div className='event-details'>
+              <br />
               <h6>Event Details</h6>
               <p className='details-paragraph'>{detailPage.about}</p>
             </div>
@@ -150,7 +151,7 @@ export default function detailPage({ detailPage, id }) {
           </div>
         </div>
       </div>
-      <CardEvent data={data} title='Similiat Events' subTitle='Next One' />
+      <CardEvent data={data} title='Similiar Events' subTitle='Next One' />
       <Stories />
       <Statistics />
       <Footer />
