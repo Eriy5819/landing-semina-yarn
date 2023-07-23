@@ -8,6 +8,7 @@ import { getData } from '@/utils/fetchData';
 import Footer from '@/components/Footer';
 
 export default function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
